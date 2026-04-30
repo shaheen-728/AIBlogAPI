@@ -10,7 +10,6 @@ from routers import posts, users
 async def lifespan(app: FastAPI):
     # 🔥 Startup
     print("Hello from aiblogapi!")
-    Base.metadata.create_all(bind=engine)
 
     yield
 

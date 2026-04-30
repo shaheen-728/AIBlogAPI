@@ -5,9 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "alembic>=1.18.4",
     "bcrypt<4",
+    "fastapi-security>=0.1.0",
     "fastapi[standard]>=0.136.0",
     "passlib[bcrypt]>=1.7.4",
+    "psycopg2-binary>=2.9.12",
     "pydantic>=2.13.3",
     "python-jose[cryptography]>=3.5.0",
     "sqlalchemy>=2.0.49",
