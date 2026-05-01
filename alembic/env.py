@@ -1,7 +1,7 @@
 from logging.config import fileConfig
 import sys
 
-from sqlalchemy import engine_from_config
+from sqlalchemy import create_engine
 from sqlalchemy import pool
 
 from alembic import context
@@ -69,7 +69,7 @@ def run_migrations_online():
     if not DATABASE_URL:
         raise ValueError("DATABASE_URL not set")
 
-    connectable = engine_from_config(
+    connectable = create_engine(
         DATABASE_URL,
         poolclass=pool.NullPool,
     )
