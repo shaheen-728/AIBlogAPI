@@ -45,7 +45,7 @@ def run_migrations_offline():
     script output.
 
     """
-    url = config.get_main_option("sqlalchemy.url",os.getenv("AIBLOG_DATABASE_URL"))
+    url = config.get_main_option("sqlalchemy.url",os.getenv("DATABASE_URL"))
     context.configure(
         url=url,
         target_metadata=target_metadata,
